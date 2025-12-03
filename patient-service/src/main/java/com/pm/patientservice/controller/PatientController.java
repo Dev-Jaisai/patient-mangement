@@ -39,6 +39,7 @@ public class PatientController {
     public ResponseEntity<PatientResponseDTO> addPatient1(@RequestBody PatientRequestDTO patientRequestDTO) {
         PatientResponseDTO patientResponseDTO = patientService.addPatient(patientRequestDTO);
         System.out.println("Hi ");
+       syso
         return new ResponseEntity<>(patientResponseDTO, HttpStatus.CREATED);
     }
 }
