@@ -34,4 +34,11 @@ public class PatientController {
 
         return new ResponseEntity<>(patientResponseDTO, HttpStatus.CREATED);
     }
+
+    @PostMapping("/addPatient")
+    public ResponseEntity<PatientResponseDTO> addPatient1(@RequestBody PatientRequestDTO patientRequestDTO) {
+        PatientResponseDTO patientResponseDTO = patientService.addPatient(patientRequestDTO);
+
+        return new ResponseEntity<>(patientResponseDTO, HttpStatus.CREATED);
+    }
 }
